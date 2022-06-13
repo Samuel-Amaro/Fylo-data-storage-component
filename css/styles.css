@@ -1,0 +1,115 @@
+/*font-family: 'Raleway', sans-serif; - 400 - 700*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root{
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --color-gradient-from: hsl(6, 100%, 80%);
+    --color-gradient-to: hsl(335, 100%, 65%);
+}
+
+html{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/**MOBILE FIRST**/
+
+body{
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-main__options,
+.block-main__storage{
+    background-color: var(--dark-blue);
+}
+
+.block-main{
+    display: grid; /*flex*/
+    /*flex-flow: column nowrap;*/
+    grid-template-columns: minmax(min-content, 330px);
+    gap: 15px;
+}
+
+.block-main__options,
+.block-main__storage{
+    /*width: 330px;*/
+    padding: 40px;
+}
+
+.block-main__logo{
+    margin-bottom: 30px;
+}
+
+.block-main__logo img{
+    max-width: 100%;
+}
+
+.block-main__menu-options{
+    display: grid; /*flex*/
+    grid-template-columns: repeat(3, minmax(min-content, 48px));
+    gap: 15px;
+}
+
+.block-main__menu-options .block-main_option{
+    display: flex;
+    background-color: var(--very-dark-blue);
+    padding: 10px;
+    border: 1px solid var(--very-dark-blue);
+    border-radius: 10px;   
+    align-items: center;
+    justify-content: center;
+}
+
+.block-main__options{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 100px;
+}
+
+.block-main__storage{
+    border-radius: 12px;
+}
+
+.block-main__description-storage{
+    color: hsla(0, 100%, 100%, 0.7);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.block-main__destac-text{
+    color: white;
+    font-weight: 700;
+}
+
+/*special*/
+.block-main__current-qtd-storage{
+    display: none;
+}
+
+.block-main__range-storage::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: var(--very-dark-blue);
+    border-radius: 15px;
+}
